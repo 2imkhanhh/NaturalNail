@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NATURAL NAILS & BEAUTY</title>
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="fixed-top w-100 header-custom d-flex justify-content-between align-items-center px-4 px-md-5">
+        <nav class="d-flex align-items-center gap-3 gap-md-4 w-33">
+            <a class="nav-link-custom nav-link-active" href="#">Home</a>
+            <a class="nav-link-custom" href="#">Service</a>
+            <a class="nav-link-custom" href="#">Gift card</a>
+            <a class="nav-link-custom" href="#">Policy</a>
+            <a class="nav-link-custom" href="#">Contact</a>
+        </nav>
+
+        <div class="w-33 d-flex justify-content-center">
+            <a href="#">
+                <img src="assets/images/logo.png" alt="Natural Nails & Beauty Logo" class="logo-img">
+            </a>
+        </div>
+
+        <div class="w-33 d-flex justify-content-end">
+            <button class="btn-custom">
+                Book now
+            </button>
+        </div>
+    </header>
+
+    <section class="hero-section d-flex justify-content-center align-items-center text-center px-3">
+        <img src="assets/images/background.png" alt="Nail Salon Experience" class="hero-bg-img">
+
+        <div class="hero-content">
+            <h1 class="hero-title text-uppercase mb-4">
+                Take your nail salon experience<br>to the next level
+            </h1>
+            <button class="btn-custom">
+                Book now
+            </button>
+        </div>
+    </section>
+
+    <section class="service-section">
+        <div class="service-ticker">
+            <div class="ticker-content d-flex justify-content-between px-5">
+                <span>Nail Art</span>
+                <span>Manicures</span>
+                <span>Pedicures</span>
+                <span>BIBA</span>
+                <span>Acrylics</span>
+                <span>SNS</span>
+                <span>Waxing</span>
+                <span>Lashes</span>
+                <span>Nail Art</span>
+                <span>Manicures</span>
+                <span>Pedicures</span>
+                <span>BIBA</span>
+                <span>Acrylics</span>
+                <span>SNS</span>
+                <span>Waxing</span>
+                <span>Lashes</span>
+            </div>
+        </div>
+
+        <div class="container py-5">
+            <div class="d-flex justify-content-between align-items-end mb-4">
+                <h2 class="service-title text-uppercase m-0">Our service</h2>
+                <a href="#" class="price-list-link">
+                    <span class="link-text">view our price list</span>
+                    <i class="fa-solid fa-arrow-right link-arrow"></i>
+                </a>
+            </div>
+
+            <div class="service-carousel-wrapper">
+                <button id="prevBtn" class="nav-btn prev-btn d-none d-md-flex">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="service-track-outer">
+                    <div id="serviceTrack" class="row service-track">
+
+                        <div class="col-12 col-md-4 mb-4">
+                            <div class="service-card text-center">
+                                <img src="assets/images/service1.png" alt="Nails Service"
+                                    class="img-fluid service-img mb-3">
+                                <h3 class="service-name">Nails</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4 mb-4">
+                            <div class="service-card text-center">
+                                <img src="assets/images/service2.png" alt="Lashes Service"
+                                    class="img-fluid service-img mb-3">
+                                <h3 class="service-name">Lashes</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4 mb-4">
+                            <div class="service-card text-center">
+                                <img src="assets/images/service3.png" alt="Waxing Service"
+                                    class="img-fluid service-img mb-3">
+                                <h3 class="service-name">Waxing</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4 mb-4">
+                            <div class="service-card text-center">
+                                <img src="assets/images/service1.png" alt="Nails Service"
+                                    class="img-fluid service-img mb-3">
+                                <h3 class="service-name">Nail Art</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4 mb-4">
+                            <div class="service-card text-center">
+                                <img src="assets/images/service2.png" alt="Lashes Service"
+                                    class="img-fluid service-img mb-3">
+                                <h3 class="service-name">Pedicures</h3>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button id="nextBtn" class="nav-btn next-btn d-none d-md-flex">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const track = document.getElementById("serviceTrack");
+            const prevBtn = document.getElementById("prevBtn");
+            const nextBtn = document.getElementById("nextBtn");
+
+            let currentIndex = 0;
+
+            function getVisibleCount() {
+                return window.innerWidth >= 768 ? 3 : 1;
+            }
+
+            function getTotalCards() {
+                return track.querySelectorAll('.col-12').length;
+            }
+
+            function getMaxIndex() {
+                return Math.max(0, getTotalCards() - getVisibleCount());
+            }
+
+            function slideTo(index) {
+                const cards = track.querySelectorAll('.col-12');
+                if (cards.length === 0) return;
+
+                currentIndex = Math.max(0, Math.min(index, getMaxIndex()));
+
+                const cardWidth = cards[0].offsetWidth;
+                track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+
+                updateButtons();
+            }
+
+            function updateButtons() {
+                prevBtn.disabled = currentIndex <= 0;
+                nextBtn.disabled = currentIndex >= getMaxIndex();
+            }
+
+            nextBtn.addEventListener("click", () => slideTo(currentIndex + 1));
+            prevBtn.addEventListener("click", () => slideTo(currentIndex - 1));
+
+            window.addEventListener("resize", () => slideTo(currentIndex));
+
+            slideTo(0);
+        });
+    </script>
+</body>
+
+</html>

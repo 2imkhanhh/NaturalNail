@@ -1,0 +1,236 @@
+:root {
+    --primary: #9E3B31;
+    --header-bg: #E6BAB3;
+    --btn-bg: #D0746A;
+    --btn-text: #F7F3ED; 
+    --bg-light: #FFFEFB;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header-custom {
+    min-height: 10vh; 
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: var(--header-bg);
+    z-index: 99; 
+}
+
+.w-33 {
+    width: 33.333333%;
+}
+
+.nav-link-custom {
+    font-family: 'Albert Sans', sans-serif; 
+    letter-spacing: 0.1em;                  
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.95rem; 
+    transition: opacity 0.3s ease;
+}
+
+.nav-link-custom:hover {
+    opacity: 0.7;
+    color: var(--primary);
+}
+
+.nav-link-active {
+    border-bottom: 1px solid var(--primary); 
+}
+
+.btn-custom {
+    font-family: 'Albert Sans', sans-serif; 
+    letter-spacing: 0.1em;                  
+    background-color: var(--btn-bg);
+    color: var(--btn-text);                
+    border-radius: 50px;
+    border: none;
+    padding: 0.5rem 2rem;               
+    font-size: 0.95rem;                    
+    transition: opacity 0.3s ease;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.btn-custom:hover {
+    opacity: 0.9;
+    color: var(--btn-text);                 
+}
+
+.logo-img {
+    max-height: clamp(45px, 5vh, 70px); 
+    width: auto;      
+    object-fit: contain;
+}
+
+.hero-section {
+    position: relative; 
+    min-height: 100vh;
+    padding-top: 10vh; 
+    overflow: hidden; 
+}
+
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1;      
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--btn-text);
+    font-size: clamp(2rem, 4vw, 3.5rem); 
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.service-section {
+    background-color: #f4deda; 
+    padding-bottom: 2rem;
+}
+
+.service-ticker {
+    background-color: var(--bg-light);
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(158, 59, 49, 0.1); 
+}
+
+.ticker-content span {
+    font-family: 'Albert Sans', sans-serif;
+    color: var(--primary);
+    font-size: 0.95rem;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.service-track {
+    flex-wrap: nowrap;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+}
+
+.service-track::-webkit-scrollbar {
+    display: none; 
+}
+
+.service-title {
+    font-family: 'Cormorant Garamond', serif;
+    padding-top: 30px;
+    color: var(--primary);
+    font-size: clamp(2rem, 4vw, 3.5rem); 
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.price-list-link {
+    font-family: 'Albert Sans', sans-serif;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding-bottom: 2px;
+    margin-bottom: 0.5rem; 
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.price-list-link:hover {
+    opacity: 0.8; 
+    color: var(--primary);
+}
+
+.link-text {
+    border-bottom: 1px solid var(--primary);
+    padding-bottom: 2px;
+}
+
+.link-arrow {
+    opacity: 0;                  
+    max-width: 0;                 
+    transform: translateX(-10px); 
+    transition: all 0.3s ease;    
+    overflow: hidden;
+}
+
+.price-list-link:hover .link-arrow {
+    opacity: 1;                  
+    max-width: 20px;              
+    transform: translateX(6px);  
+}
+
+.service-img {
+    border-radius: 10px; 
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;   
+}
+
+.service-name {
+    font-family: 'Cormorant Garamond';
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.service-carousel-wrapper {
+    position: relative;
+}
+
+.service-track-outer {
+    overflow: hidden;  
+}
+
+.nav-btn {
+    position: absolute;
+    top: 40%; 
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--header-bg); 
+    color: #fff;
+    border: none;
+    font-size: 0.8rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; 
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: var(--btn-bg);
+}
+
+.nav-btn:disabled {
+    opacity: 0.3; 
+    background-color: var(--header-bg); 
+}
+
+.nav-btn:disabled:hover {
+    background-color: var(--header-bg); 
+}
+
+.prev-btn {
+    left: -60px; 
+}
+
+.next-btn {
+    right: -60px; 
+}
