@@ -16,7 +16,7 @@
 
 <body>
     <header class="fixed-top w-100 header-custom d-flex justify-content-between align-items-center px-4 px-md-5">
-        <nav class="d-flex align-items-center gap-3 gap-md-4 w-33">
+        <nav class="d-flex align-items-center gap-3 gap-md-4 w-33 desktop-nav" id="mainNav">
             <a class="nav-link-custom nav-link-active" href="#">Home</a>
             <a class="nav-link-custom" href="#">Service</a>
             <a class="nav-link-custom" href="#">Gift card</a>
@@ -24,17 +24,21 @@
             <a class="nav-link-custom" href="#">Contact</a>
         </nav>
 
-        <div class="w-33 d-flex justify-content-center">
+        <div class="logo-wrapper d-flex justify-content-center w-33">
             <a href="#">
                 <img src="assets/images/logo.png" alt="Natural Nails & Beauty Logo" class="logo-img">
             </a>
         </div>
 
-        <div class="w-33 d-flex justify-content-end">
-            <button class="btn-custom">
-                Book now
-            </button>
+        <div class="w-33 d-flex justify-content-end desktop-nav">
+            <button class="btn-custom">Book now</button>
         </div>
+
+        <button class="hamburger-btn d-none" id="hamburgerBtn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <section class="hero-section d-flex justify-content-center align-items-center text-center px-3">
@@ -140,6 +144,20 @@
 
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
+        const btn = document.getElementById('hamburgerBtn');
+        const nav = document.getElementById('mainNav');
+
+        btn.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            btn.classList.toggle('open', isOpen);
+        });
+
+        nav.querySelectorAll('.nav-link-custom').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                btn.classList.remove('open');
+            });
+        });
         document.addEventListener("DOMContentLoaded", function () {
             const track = document.getElementById("serviceTrack");
             const prevBtn = document.getElementById("prevBtn");
