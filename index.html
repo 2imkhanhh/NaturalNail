@@ -261,6 +261,56 @@
         </div>
     </section>
 
+    <footer class="footer-section">
+        <div class="container-fluid px-4 px-md-5">
+            <div class="row footer-top">
+                <div
+                    class="col-12 col-lg-4 mb-5 mb-lg-0 footer-brand-col d-flex align-items-center justify-content-center justify-content-lg-start">
+                    <a href="index.html" class="d-inline-block">
+                        <img src="assets/images/footer-logo.png" alt="Natural Nails & Beauty Logo"
+                            class="footer-logo-img">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2 mb-4 mb-md-0">
+                    <h4 class="footer-title">Natural Nails & Beauty</h4>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Gift card</a></li>
+                        <li><a href="#">Policy</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-5 col-lg-4 mb-4 mb-md-0">
+                    <h4 class="footer-title">Information</h4>
+                    <ul class="footer-info list-unstyled">
+                        <li>Address: Shop 13 Botanical Village - Corner Ellscott Blvd & Brossard Rd, Mickleham VIC 3064
+                        </li>
+                        <li>Phone: +012 456 7896</li>
+                        <li>Email: naturalnailsbeauty@gmail.com</li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-3 col-lg-2">
+                    <h4 class="footer-title">Connect Via Social</h4>
+                    <ul class="footer-social list-unstyled">
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fa-brands fa-tiktok"></i> Tiktok</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start px-4 px-md-5">
+            <p class="mb-3 mb-md-0">Copyright © natural nails. All rights reserved</p>
+            <div class="footer-bottom-links d-flex flex-column flex-md-row gap-3 gap-md-5">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+            </div>
+        </div>
+    </footer>
+
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
         const btn = document.getElementById('hamburgerBtn');
@@ -371,7 +421,7 @@
                     if (items.length === 0) return;
 
                     const visibleCount = window.innerWidth >= 768 ? 3 : 1;
-                    
+
                     const maxIndex = Math.max(0, items.length - visibleCount);
                     currentGalleryIndex = Math.max(0, Math.min(index, maxIndex));
 
@@ -380,7 +430,7 @@
                     const moveAmount = (itemWidth + gap) * currentGalleryIndex;
 
                     galleryTrack.style.transform = `translateX(-${moveAmount}px)`;
-                    
+
                     updateGalleryButtons(maxIndex);
                 }
 
