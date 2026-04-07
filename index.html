@@ -56,23 +56,25 @@
 
     <section class="service-section">
         <div class="service-ticker">
-            <div class="ticker-content d-flex justify-content-between px-5">
-                <span>Nail Art</span>
-                <span>Manicures</span>
-                <span>Pedicures</span>
-                <span>BIBA</span>
-                <span>Acrylics</span>
-                <span>SNS</span>
-                <span>Waxing</span>
-                <span>Lashes</span>
-                <span>Nail Art</span>
-                <span>Manicures</span>
-                <span>Pedicures</span>
-                <span>BIBA</span>
-                <span>Acrylics</span>
-                <span>SNS</span>
-                <span>Waxing</span>
-                <span>Lashes</span>
+            <div class="ticker-content" id="tickerContent">
+                <div class="ticker-list" id="tickerList">
+                    <span>Nail Art</span>
+                    <span>Manicures</span>
+                    <span>Pedicures</span>
+                    <span>BIBA</span>
+                    <span>Acrylics</span>
+                    <span>SNS</span>
+                    <span>Waxing</span>
+                    <span>Lashes</span>
+                    <span>Nail Art</span>
+                    <span>Manicures</span>
+                    <span>Pedicures</span>
+                    <span>BIBA</span>
+                    <span>Acrylics</span>
+                    <span>SNS</span>
+                    <span>Waxing</span>
+                    <span>Lashes</span>
+                </div>
             </div>
         </div>
 
@@ -201,7 +203,42 @@
             window.addEventListener("resize", () => slideTo(currentIndex));
 
             slideTo(0);
+
+            function checkAndRunTicker() {
+                const tickerContent = document.getElementById("tickerContent");
+                const tickerList = document.getElementById("tickerList");
+                if (!tickerContent || !tickerList) return;
+
+                const items = tickerList.querySelectorAll("span");
+
+                tickerContent.classList.remove("running", "static-center");
+                const existingClone = tickerContent.querySelector(".clone-list");
+                if (existingClone) existingClone.remove();
+
+                const screenWidth = window.innerWidth;
+                const listWidth = tickerList.offsetWidth;
+                const itemCount = items.length;
+
+                let shouldRun = false;
+                if (listWidth > screenWidth) {
+                    shouldRun = true;
+                }
+
+                if (shouldRun) {
+                    const clone = tickerList.cloneNode(true);
+                    clone.classList.add("clone-list");
+                    clone.removeAttribute("id");
+                    tickerContent.appendChild(clone);
+                    tickerContent.classList.add("running");
+                } else {
+                    tickerContent.classList.add("static-center");
+                }
+            }
+
+            checkAndRunTicker();
+            window.addEventListener("resize", checkAndRunTicker);
         });
+
     </script>
 </body>
 
