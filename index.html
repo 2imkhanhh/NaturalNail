@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link href="style.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -224,6 +224,43 @@
         </div>
     </section>
 
+    <section class="gallery-section">
+        <div class="container-fluid px-4 px-md-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="gallery-title text-uppercase m-0">Gallery</h2>
+
+                <div class="gallery-nav d-flex gap-2">
+                    <button class="nav-btn-gallery prev-gallery" aria-label="Previous">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="nav-btn-gallery next-gallery" aria-label="Next">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="gallery-carousel-wrapper">
+                <div class="gallery-track d-flex gap-4">
+                    <div class="gallery-item flex-shrink-0">
+                        <img src="assets/images/gallery1.png" alt="Nail Gallery Image 1" class="gallery-img">
+                    </div>
+                    <div class="gallery-item flex-shrink-0">
+                        <img src="assets/images/gallery2.png" alt="Nail Gallery Image 2" class="gallery-img">
+                    </div>
+                    <div class="gallery-item flex-shrink-0">
+                        <img src="assets/images/gallery3.png" alt="Nail Gallery Image 3" class="gallery-img">
+                    </div>
+                    <div class="gallery-item flex-shrink-0">
+                        <img src="assets/images/gallery4.png" alt="Nail Gallery Image 4" class="gallery-img">
+                    </div>
+                    <div class="gallery-item flex-shrink-0">
+                        <img src="assets/images/gallery1.png" alt="Nail Gallery Image 1" class="gallery-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
         const btn = document.getElementById('hamburgerBtn');
@@ -316,8 +353,52 @@
 
             checkAndRunTicker();
             window.addEventListener("resize", checkAndRunTicker);
-        });
 
+            const galleryTrack = document.querySelector('.gallery-track');
+            const prevGalleryBtn = document.querySelector('.prev-gallery');
+            const nextGalleryBtn = document.querySelector('.next-gallery');
+
+            if (galleryTrack && prevGalleryBtn && nextGalleryBtn) {
+                let currentGalleryIndex = 0;
+
+                function updateGalleryButtons(maxIndex) {
+                    prevGalleryBtn.disabled = currentGalleryIndex <= 0;
+                    nextGalleryBtn.disabled = currentGalleryIndex >= maxIndex;
+                }
+
+                function slideGalleryTo(index) {
+                    const items = galleryTrack.querySelectorAll('.gallery-item');
+                    if (items.length === 0) return;
+
+                    const visibleCount = window.innerWidth >= 768 ? 3 : 1;
+                    
+                    const maxIndex = Math.max(0, items.length - visibleCount);
+                    currentGalleryIndex = Math.max(0, Math.min(index, maxIndex));
+
+                    const itemWidth = items[0].offsetWidth;
+                    const gap = parseFloat(window.getComputedStyle(galleryTrack).gap) || 0;
+                    const moveAmount = (itemWidth + gap) * currentGalleryIndex;
+
+                    galleryTrack.style.transform = `translateX(-${moveAmount}px)`;
+                    
+                    updateGalleryButtons(maxIndex);
+                }
+
+                nextGalleryBtn.addEventListener('click', () => {
+                    slideGalleryTo(currentGalleryIndex + 1);
+                });
+
+                prevGalleryBtn.addEventListener('click', () => {
+                    slideGalleryTo(currentGalleryIndex - 1);
+                });
+
+                window.addEventListener('resize', () => {
+                    slideGalleryTo(currentGalleryIndex);
+                });
+
+                slideGalleryTo(0);
+            }
+        });
     </script>
 </body>
 
