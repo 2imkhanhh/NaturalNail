@@ -540,6 +540,29 @@ body {
     .next-btn {
         right: 0px;
     }
+
+    .about-us-section .salons-content, 
+    .about-us-section .salons-image-wrapper {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .salons-content {
+        padding: 3.5rem 6%;
+        order: 2; 
+    }
+
+    .salons-title {
+        font-size: 2.5rem;
+    }
+
+    .salons-image-wrapper {
+        order: 1; 
+        height: 450px;
+        min-height: 450px;
+        padding: 0;
+    }
 }
 
 @media (max-width: 767px) {
@@ -662,5 +685,62 @@ body {
 
     .next-btn {
         right: 0px;
+    }
+
+    .salons-banner {
+        padding: 12px 20px;
+        text-align: center;
+    }
+
+    .banner-tagline {
+        font-size: 1.1rem;
+    }
+
+    .salons-content {
+        padding: 2.5rem 6%;
+        order: 2;
+    }
+
+    .salons-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .salons-desc {
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+    }
+
+    .salons-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .hours-list {
+        font-size: 0.88rem;
+        max-width: 100%;
+    }
+
+    .hours-list .row {
+        flex-wrap: nowrap;
+    }
+
+    .hours-list .col-6 {
+        font-size: 0.85rem;
+        padding-right: 4px;
+    }
+
+    .hours-note {
+        font-size: 0.85rem;
+        margin-bottom: 2rem;
+    }
+
+    .location-text {
+        font-size: 0.88rem;
+        max-width: 100%;
+    }
+
+    .salons-image-wrapper {
+        min-height: 260px;
+        order: 1;
     }
 }
