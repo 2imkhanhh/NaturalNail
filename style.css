@@ -430,6 +430,41 @@ body {
     display: block;
 }
 
+.transport-section {
+    background-color: var(--bg-light); 
+    padding: 5rem 0 8rem 0; 
+    overflow: hidden;
+}
+
+.transport-title {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--primary);
+    font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+}
+
+.transport-img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .img-left {
+        transform: translateY(30px);
+    }
+    .img-right {
+        transform: translateY(-30px); 
+    }
+    .transport-content {
+        padding: 0 2rem;
+    }
+}
+
 @media (max-width: 1024px) and (min-width: 768px) {
     .desktop-nav {
         display: none !important;
@@ -562,6 +597,30 @@ body {
         height: 450px;
         min-height: 450px;
         padding: 0;
+    }
+
+    .transport-section {
+        padding: 4rem 0 6rem 0;
+    }
+
+    .transport-img {
+        max-width: 240px;
+    }
+
+    .img-left {
+        transform: translateY(20px);
+    }
+
+    .img-right {
+        transform: translateY(-20px);
+    }
+
+    .transport-content {
+        padding: 0 1rem;
+    }
+
+    .transport-title {
+        font-size: clamp(1.5rem, 2.2vw, 2rem);
     }
 }
 
@@ -742,5 +801,45 @@ body {
     .salons-image-wrapper {
         min-height: 260px;
         order: 1;
+    }
+
+    .transport-section {
+        padding: 3rem 0 4rem 0;
+    }
+
+    .transport-title {
+        font-size: 1.5rem;
+        letter-spacing: 0.03em;
+        margin-bottom: 1rem;
+    }
+
+    .transport-img {
+        max-width: 200px;
+    }
+
+    .img-left,
+    .img-right {
+        transform: none;
+    }
+
+    .transport-section .row {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .transport-section .col-12.col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .transport-section .col-12.col-md-6 {
+        order: -1;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .transport-content {
+        padding: 0 0.5rem;
     }
 }
