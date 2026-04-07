@@ -330,6 +330,106 @@ body {
     right: -60px;
 }
 
+.about-us-section {
+    position: relative;
+    width: 100%;
+}
+
+.salons-banner {
+    background-color: var(--header-bg);
+    padding: 15px 50px;
+    color: var(--primary);
+}
+
+.banner-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-logo-img {
+    max-height: clamp(30px, 4vh, 45px);
+    width: auto;
+    object-fit: contain;
+}
+
+.banner-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.salons-content {
+    background-color: #f4deda;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 10%;
+}
+
+.salons-title {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--primary);
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+}
+
+.salons-desc {
+    font-family: 'Albert Sans', sans-serif;
+    color: #262626;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+}
+
+.salons-subtitle {
+    font-family: 'Albert Sans', sans-serif;
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.hours-list {
+    font-family: 'Albert Sans', sans-serif;
+    color: #262626;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    max-width: 450px;
+}
+
+.hours-note {
+    font-family: 'Albert Sans', sans-serif;
+    color: #262626;
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+}
+
+.location-text {
+    font-family: 'Albert Sans', sans-serif;
+    color: #262626;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 90%;
+    margin-bottom: 0;
+}
+
+.salons-image-wrapper {
+    height: 100%;
+    min-height: 400px;
+}
+
+.salons-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 @media (max-width: 1024px) and (min-width: 768px) {
     .desktop-nav {
         display: none !important;
