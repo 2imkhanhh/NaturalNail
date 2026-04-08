@@ -154,7 +154,6 @@ body {
 .ticker-content {
     display: flex;
     width: max-content;
-    transition: all 0.3s ease;
 }
 
 .ticker-list {
@@ -697,7 +696,6 @@ body {
         gap: 40px; 
         overflow-x: auto; 
         padding: 0 30px !important; 
-        -webkit-overflow-scrolling: touch; 
     }
 
     .service-ticker .ticker-content::-webkit-scrollbar {
@@ -888,7 +886,6 @@ body {
         gap: 30px;
         overflow-x: auto;
         padding: 0 20px !important;
-        -webkit-overflow-scrolling: touch;
     }
 
     .service-ticker .ticker-content::-webkit-scrollbar {
