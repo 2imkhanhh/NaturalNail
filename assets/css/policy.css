@@ -7,8 +7,8 @@
 }
 
 .policy-content-section {
+    padding: 100px 0;
     background-color: #F7ECE8;
-    min-height: 50vh;
 }
 
 .policy-container {
@@ -119,6 +119,60 @@
     font-weight: 700;
 }
 
+.contact-section {
+    background-color: #F8EBE9; 
+    padding-bottom: 50px;
+}
+
+.contact-wrapper {
+    background-color: var(--bg-light); 
+    border-radius: 8px; 
+    overflow: hidden; 
+    margin-bottom: 3rem;
+}
+
+.contact-img-box {
+    min-height: 300px; 
+}
+
+.contact-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    color: var(--primary);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.contact-subtitle {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--primary);
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.custom-input {
+    border: none;
+    border-bottom: 1px solid rgba(158, 59, 49, 0.2); 
+    border-radius: 0; 
+    padding: 0.5rem 0; 
+    background-color: transparent;
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 0.9rem;
+    color: #6E6E6E;
+    box-shadow: none !important; 
+    transition: border-color 0.3s ease;
+}
+
+.custom-input::placeholder {
+    color: rgba(158, 59, 49, 0.5); 
+}
+
+.custom-input:focus {
+    border-bottom: 1px solid var(--primary); 
+    background-color: transparent;
+}
+
 @media (max-width: 1024px) and (min-width: 768px) {
     .policy-banner-section{
         height: 50vh;
@@ -128,5 +182,18 @@
 @media (max-width: 767px) {
     .policy-banner-section{
         height: 40vh;
+    }
+
+    .policy-content-section{
+        padding: 50px 0;
+    }
+
+    .policy-accordion .accordion-body{
+        padding: 1.5rem 0 1.5rem 1.5rem;
+    }
+
+    .contact-img-box {
+        height: 300px; 
+        min-height: 300px; 
     }
 }
