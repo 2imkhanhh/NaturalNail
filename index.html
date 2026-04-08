@@ -312,21 +312,8 @@
     </footer>
 
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
     <script>
-        const btn = document.getElementById('hamburgerBtn');
-        const nav = document.getElementById('mainNav');
-
-        btn.addEventListener('click', () => {
-            const isOpen = nav.classList.toggle('open');
-            btn.classList.toggle('open', isOpen);
-        });
-
-        nav.querySelectorAll('.nav-link-custom').forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('open');
-                btn.classList.remove('open');
-            });
-        });
         document.addEventListener("DOMContentLoaded", function () {
             const track = document.getElementById("serviceTrack");
             const prevBtn = document.getElementById("prevBtn");
