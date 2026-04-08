@@ -1,0 +1,172 @@
+.service-banner-section {
+    position: relative;
+    height: 70vh; 
+    padding-top: 10vh; 
+    overflow: hidden;
+    width: 100%;
+}
+
+.service-menu-section {
+    background-color: #F8EFEA; 
+    padding: 100px 0 150px 0;
+    min-height: 50vh;
+}
+
+.custom-container {
+    max-width: 1200px; 
+}
+
+.custom-tabs {
+    display: flex;
+    border-radius: 6px;
+    overflow: hidden; 
+}
+
+.tab-content {
+    padding: 0 50px; 
+}
+
+.custom-tabs .nav-item {
+    flex: 1; 
+}
+
+.custom-tabs .nav-link {
+    width: 100%;
+    background-color: var(--header-bg);
+    color: var(--primary);
+    border-radius: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem;
+    border-right: 1px solid rgba(158, 59, 49, 0.15); 
+    transition: all 0.3s ease;
+}
+
+.custom-tabs .nav-item:last-child .nav-link {
+    border-right: none;
+}
+
+.custom-tabs .nav-link.active {
+    background-color: var(--bg-light);
+    color: var(--primary);
+}
+
+.custom-accordion .accordion-item {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0; 
+}
+
+.custom-accordion .accordion-header {
+    border-bottom: 1px solid var(--primary);
+}
+
+.custom-accordion .accordion-button {
+    background-color: transparent;
+    color: var(--primary);
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    padding: 1.5rem 0 0.5rem 0;
+    box-shadow: none !important;
+    border: 0;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+    transition: color 0.3s ease; 
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    color: var(--primary);
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.custom-accordion .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%239E3B31'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transition: transform 0.35s ease; 
+}
+
+.custom-accordion .accordion-button:not(.collapsed)::after {
+    transform: rotate(-180deg);
+}
+
+.custom-accordion .accordion-collapse.collapsing {
+    transition: height 0.35s ease-in-out;
+    will-change: height;
+}
+
+.custom-accordion .accordion-collapse.collapse.show {
+    visibility: visible;
+}
+
+.custom-accordion .accordion-body {
+    padding: 1rem 0 0 0;
+    background-color: transparent; 
+}
+
+.service-row {
+    padding: 0.75rem 0;
+}
+
+.service-info {
+    max-width: 65%;
+}
+
+.service-name {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #262626;
+    margin-bottom: 0.25rem;
+}
+
+.service-desc {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 0.8rem;
+    color: #6E6E6E;
+    line-height: 1.5;
+    margin-bottom: 0.25rem;
+}
+
+.view-more {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 0.75rem;
+    color: #6E6E6E;
+    text-decoration: none;
+}
+
+.view-more:hover {
+    color: var(--primary);
+}
+
+.service-meta {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+    min-width: 140px;
+}
+
+.service-time {
+    color: #262626;
+    font-size: 0.9rem;
+    width: 50px;
+    text-align: right;
+}
+
+.service-price {
+    width: 80px;
+    color: #262626;
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.service-divider {
+    border-color: rgba(158, 59, 49, 0.15); 
+    margin: 0;
+    opacity: 1;
+}
