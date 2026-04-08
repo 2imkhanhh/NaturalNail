@@ -6,6 +6,119 @@
     width: 100%;
 }
 
+.policy-content-section {
+    background-color: #F7ECE8;
+    min-height: 50vh;
+}
+
+.policy-container {
+    max-width: 1000px;
+}
+
+.policy-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    color: var(--primary);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+}
+
+.policy-accordion .accordion-item {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0; 
+}
+
+.policy-accordion .accordion-header {
+    border-bottom: 1px solid var(--primary);
+}
+
+.policy-accordion .accordion-button {
+    background-color: transparent;
+    color: var(--primary);
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    padding: 1.25rem 0;
+    box-shadow: none !important;
+    border: 0;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+    transition: color 0.3s ease; 
+}
+
+.policy-accordion .accordion-button:not(.collapsed) {
+    color: var(--primary);
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.policy-accordion .accordion-button::after {
+    background-image: none; 
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f078"; 
+    color: var(--primary); 
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.35s ease; 
+}
+
+.policy-accordion .accordion-button:not(.collapsed)::after {
+    transform: rotate(-180deg);
+}
+
+.policy-accordion .accordion-collapse.collapsing {
+    transition: height 0.35s ease-in-out;
+    will-change: height;
+}
+
+.policy-accordion .accordion-body {
+    padding: 1.5rem; 
+    background-color: transparent; 
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.cancellation-list {
+    list-style: none; 
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1000px;
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.cancellation-list li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.cancellation-list li::before {
+    content: "\2022"; 
+    color: var(--primary);
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: -2px; 
+}
+
+.cancellation-list strong {
+    color: var(--primary);
+    font-weight: 700;
+}
+
 @media (max-width: 1024px) and (min-width: 768px) {
     .policy-banner-section{
         height: 50vh;
