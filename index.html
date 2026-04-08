@@ -353,8 +353,6 @@
             nextBtn.addEventListener("click", () => slideTo(currentIndex + 1));
             prevBtn.addEventListener("click", () => slideTo(currentIndex - 1));
 
-            window.addEventListener("resize", () => slideTo(currentIndex));
-
             slideTo(0);
 
             function checkAndRunTicker() {
@@ -389,7 +387,18 @@
             }
 
             checkAndRunTicker();
-            window.addEventListener("resize", checkAndRunTicker);
+            let currentWindowWidth = window.innerWidth;
+
+            window.addEventListener("resize", function() {
+                if (window.innerWidth === currentWindowWidth) {
+                    return; 
+                }
+
+                currentWindowWidth = window.innerWidth; 
+                
+                slideTo(currentIndex); 
+                checkAndRunTicker();
+            });
         });
     </script>
 </body>
