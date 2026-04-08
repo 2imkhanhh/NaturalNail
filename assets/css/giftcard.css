@@ -1,0 +1,123 @@
+.giftcard-banner-section {
+    position: relative;
+    height: 70vh; 
+    padding-top: 10vh; 
+    overflow: hidden;
+    width: 100%;
+}
+
+.giftcard-intro-section {
+    padding: 100px 0; 
+    background-color: var(--bg-light); 
+}
+
+.giftcard-subtitle {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--primary);
+    font-weight: 400;
+}
+
+.giftcard-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem); 
+    color: var(--primary);
+    font-weight: 500; 
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+}
+
+.giftcard-desc {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--primary);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.giftcard-faq-section {
+    background-color: #F8EBE9; 
+}
+
+.faq-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    color: var(--primary);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 1.3;
+}
+
+.faq-subtitle {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 0.95rem;
+    color: #6E6E6E;
+    line-height: 1.5;
+}
+
+.faq-category-title {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 0.05em;
+}
+
+.custom-accordion .accordion-item {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0; 
+}
+
+.custom-accordion .accordion-header {
+    border-bottom: 1px solid var(--primary);
+}
+
+.faq-accordion .accordion-button {
+    background-color: transparent;
+    color: #262626;
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 1.25rem 0; 
+    box-shadow: none !important;
+    border: 0;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+    transition: color 0.3s ease; 
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+    color: var(--primary);
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.custom-accordion .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%239E3B31'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transition: transform 0.35s ease; 
+}
+
+.custom-accordion .accordion-button:not(.collapsed)::after {
+    transform: rotate(-180deg);
+}
+
+.custom-accordion .accordion-collapse.collapsing {
+    transition: height 0.35s ease-in-out;
+    will-change: height;
+}
+
+.custom-accordion .accordion-body {
+    padding: 1.2rem 0 1.5rem 0;
+    background-color: transparent; 
+}
+
+.faq-answer {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 0.95rem;
+    color: #6E6E6E;
+    line-height: 1.8;
+    margin-bottom: 0;
+    padding-right: 1.5rem; 
+}
