@@ -694,7 +694,6 @@ body {
     .service-ticker .ticker-content {
         justify-content: flex-start !important; 
         gap: 40px; 
-        overflow-x: auto; 
         padding: 0 30px !important; 
     }
 
@@ -884,7 +883,6 @@ body {
     .service-ticker .ticker-content {
         justify-content: flex-start !important;
         gap: 30px;
-        overflow-x: auto;
         padding: 0 20px !important;
     }
 
