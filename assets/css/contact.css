@@ -1,0 +1,78 @@
+.contact-banner-section {
+    position: relative;
+    height: 70vh; 
+    padding-top: 10vh; 
+    overflow: hidden;
+    width: 100%;
+}
+
+.contact-info-section {
+    background-color: #F8EBE9; 
+    min-height: 60vh;
+}
+
+.contact-container {
+    max-width: 1000px;
+}
+
+.contact-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    color: var(--primary);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.contact-details-col {
+    padding-right: 2rem; 
+}
+
+.hours-list {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 0.95rem;
+    color: #262626;
+    font-weight: 400;
+    max-width: 350px;
+}
+
+.hours-note {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 0.95rem;
+    color: #262626;
+    font-style: italic;
+}
+
+.visit-list {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 0.95rem;
+    color: #262626;
+    line-height: 1.6;
+}
+
+.contact-icon {
+    color: #262626;
+    font-size: 1.1rem;
+    width: 25px; 
+    text-align: center;
+    margin-right: 15px;
+}
+
+.map-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #eee; 
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .contact-banner-section{
+        height: 50vh;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-banner-section{
+        height: 40vh;
+    }
+}
