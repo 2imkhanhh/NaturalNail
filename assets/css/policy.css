@@ -1,0 +1,19 @@
+.policy-banner-section {
+    position: relative;
+    height: 70vh; 
+    padding-top: 10vh; 
+    overflow: hidden;
+    width: 100%;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .policy-banner-section{
+        height: 50vh;
+    }
+}
+
+@media (max-width: 767px) {
+    .policy-banner-section{
+        height: 40vh;
+    }
+}
