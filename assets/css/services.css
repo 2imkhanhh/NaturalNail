@@ -7,7 +7,7 @@
 }
 
 .service-menu-section {
-    background-color: #F8EFEA; 
+    background-color: #f4deda; 
     padding: 100px 0 150px 0;
     min-height: 50vh;
 }
@@ -20,10 +20,6 @@
     display: flex;
     border-radius: 6px;
     overflow: hidden; 
-}
-
-.tab-content {
-    padding: 0 50px; 
 }
 
 .custom-tabs .nav-item {
@@ -51,6 +47,10 @@
 .custom-tabs .nav-link.active {
     background-color: var(--bg-light);
     color: var(--primary);
+}
+
+.tab-content {
+    padding: 0 50px; 
 }
 
 .custom-accordion .accordion-item {
@@ -124,12 +124,56 @@
     margin-bottom: 0.25rem;
 }
 
+.service-meta {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+    min-width: 140px;
+}
+
+.service-time {
+    color: #262626;
+    font-size: 0.9rem;
+    width: 150px;
+    text-align: right;
+    display: inline-block;
+}
+
+.service-price {
+    width: 80px;
+    color: #262626;
+    font-size: 0.9rem;
+    text-align: right;
+    display: inline-block;
+}
+
+.service-divider {
+    border-color: rgba(158, 59, 49, 0.15); 
+    margin: 0;
+    opacity: 1;
+}
+
 .service-desc {
     font-family: 'Albert Sans', sans-serif;
     font-size: 0.8rem;
     color: #6E6E6E;
     line-height: 1.5;
     margin-bottom: 0.25rem;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out; 
+}
+
+.service-desc.content-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-height: 4.5em; 
+}
+
+.service-desc.expanded {
+    display: block;
+    max-height: 800px; 
 }
 
 .view-more {
@@ -143,30 +187,8 @@
     color: var(--primary);
 }
 
-.service-meta {
-    font-family: 'Albert Sans', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #333;
-    min-width: 140px;
-}
-
-.service-time {
-    color: #262626;
-    font-size: 0.9rem;
-    width: 50px;
-    text-align: right;
-}
-
-.service-price {
-    width: 80px;
-    color: #262626;
-    font-size: 0.9rem;
-    text-align: right;
-}
-
-.service-divider {
-    border-color: rgba(158, 59, 49, 0.15); 
-    margin: 0;
-    opacity: 1;
+.toggle-more {
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 4px;
 }
