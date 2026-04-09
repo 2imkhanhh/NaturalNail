@@ -138,6 +138,12 @@ body {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
+@media screen and (min-width: 2000px) {
+    .hero-title {
+        font-size: clamp(4rem, 3vw, 6rem); 
+    }
+}
+
 .service-section {
     background-color: #F7ECE8;
     padding-bottom: 2rem;
@@ -250,7 +256,7 @@ body {
 
 .price-list-link:hover .link-arrow {
     opacity: 1;
-    max-width: 20px;
+    max-width: 30px;
     transform: translateX(6px);
 }
 
@@ -447,7 +453,6 @@ body {
 
 .transport-img {
     width: 100%;
-    max-width: 320px;
     border-radius: 12px;
     object-fit: cover;
 }

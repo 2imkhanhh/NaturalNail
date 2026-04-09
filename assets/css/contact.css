@@ -12,7 +12,7 @@
 }
 
 .contact-container {
-    max-width: 1000px;
+    padding: 0 100px;
 }
 
 .contact-heading {
@@ -32,7 +32,7 @@
     font-size: 0.95rem;
     color: #262626;
     font-weight: 400;
-    max-width: 350px;
+    /* max-width: 350px; */
 }
 
 .hours-note {
@@ -59,7 +59,7 @@
 
 .map-wrapper {
     width: 100%;
-    aspect-ratio: 1 / 1; 
+    height: 100%; 
     border-radius: 8px;
     overflow: hidden;
     background-color: #eee; 
