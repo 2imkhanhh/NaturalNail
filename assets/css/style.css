@@ -664,6 +664,7 @@ body {
 
     .logo-wrapper {
         justify-content: flex-start !important;
+        padding: 1rem 0;
         width: auto !important;
         position: relative;
         z-index: 101;
@@ -834,6 +835,7 @@ body {
 
     .logo-wrapper {
         justify-content: flex-start !important;
+        padding: 1rem 0;
         width: auto !important;
         position: relative;
         z-index: 101;

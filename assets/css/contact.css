@@ -66,13 +66,30 @@
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
-    .contact-banner-section{
+    .contact-banner-section {
         height: 50vh;
+    }
+    
+    .contact-container {
+        padding: 0 40px;
     }
 }
 
 @media (max-width: 767px) {
-    .contact-banner-section{
+    .contact-banner-section {
         height: 40vh;
+    }
+
+    .contact-container {
+        padding: 0 15px;
+    }
+
+    .contact-details-col {
+        padding-right: 0;
+    }
+
+    .contact-icon {
+        width: 20px;
+        margin-right: 10px;
     }
 }

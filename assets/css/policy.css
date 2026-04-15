@@ -174,22 +174,31 @@
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
-    .policy-banner-section{
+    .policy-banner-section {
         height: 50vh;
+    }
+    
+    .policy-container {
+        padding: 0 40px;
     }
 }
 
 @media (max-width: 767px) {
-    .policy-banner-section{
+    .policy-banner-section {
         height: 40vh;
     }
 
-    .policy-content-section{
+    .policy-content-section {
         padding: 50px 0;
     }
 
-    .policy-accordion .accordion-body{
-        padding: 1.5rem 0 1.5rem 1.5rem;
+    .policy-container {
+        padding: 0 15px;
+    }
+
+    .policy-accordion .accordion-body {
+        padding: 1rem 0; 
+        font-size: 0.9rem; 
     }
 
     .contact-img-box {
