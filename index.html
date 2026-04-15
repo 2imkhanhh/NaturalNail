@@ -26,7 +26,7 @@
 
         <div class="logo-wrapper d-flex justify-content-center w-33">
             <a href="index.html">
-                <img src="assets/images/logo.png" alt="Natural Nails & Beauty Logo" class="logo-img">
+                <img src="assets/images/footer-logo.png" alt="Natural Nails & Beauty Logo" class="logo-img">
             </a>
         </div>
 
@@ -59,9 +59,9 @@
             <div class="ticker-content" id="tickerContent">
                 <div class="ticker-list" id="tickerList">
                     <span>Nail Art</span>
-                    <span>Manicures</span>
-                    <span>Pedicures</span>
-                    <span>BIBA</span>
+                    <span>Manicure</span>
+                    <span>Pedicure</span>
+                    <span>BIAB</span>
                     <span>Acrylics</span>
                     <span>SNS</span>
                     <span>Waxing</span>
@@ -299,7 +299,8 @@
                 </div>
             </div>
         </div>
-        <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start px-4 px-md-5">
+        <div
+            class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start px-4 px-md-5">
             <p class="mb-3 mb-md-0">Copyright © natural nails. All rights reserved</p>
             <div class="footer-bottom-links d-flex flex-column flex-md-row gap-3 gap-md-5">
                 <a href="#">Privacy Policy</a>
@@ -312,6 +313,9 @@
     <script src="assets/js/script.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            /* =========================================
+               1. LOGIC CHO SERVICE CAROUSEL BÊN DƯỚI
+               ========================================= */
             const track = document.getElementById("serviceTrack");
             const prevBtn = document.getElementById("prevBtn");
             const nextBtn = document.getElementById("nextBtn");
@@ -352,49 +356,46 @@
 
             slideTo(0);
 
-            function checkAndRunTicker() {
-                const tickerContent = document.getElementById("tickerContent");
-                const tickerList = document.getElementById("tickerList");
-                if (!tickerContent || !tickerList) return;
-
-                const items = tickerList.querySelectorAll("span");
-
-                tickerContent.classList.remove("running", "static-center");
-                const existingClone = tickerContent.querySelector(".clone-list");
-                if (existingClone) existingClone.remove();
-
-                const screenWidth = window.innerWidth;
-                const listWidth = tickerList.offsetWidth;
-                const itemCount = items.length;
-
-                let shouldRun = false;
-                if (listWidth > screenWidth) {
-                    shouldRun = true;
-                }
-
-                if (shouldRun) {
-                    const clone = tickerList.cloneNode(true);
-                    clone.classList.add("clone-list");
-                    clone.removeAttribute("id");
-                    tickerContent.appendChild(clone);
-                    tickerContent.classList.add("running");
-                } else {
-                    tickerContent.classList.add("static-center");
-                }
-            }
-
-            checkAndRunTicker();
             let currentWindowWidth = window.innerWidth;
+            window.addEventListener("resize", function () {
+                if (window.innerWidth === currentWindowWidth) return;
+                currentWindowWidth = window.innerWidth;
+                slideTo(currentIndex);
+            });
 
-            window.addEventListener("resize", function() {
-                if (window.innerWidth === currentWindowWidth) {
-                    return; 
-                }
 
-                currentWindowWidth = window.innerWidth; 
-                
-                slideTo(currentIndex); 
-                checkAndRunTicker();
+            /* =========================================
+               2. LOGIC DRAG-TO-SCROLL CHO SERVICE TICKER
+               ========================================= */
+            const ticker = document.querySelector('.service-ticker');
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            // Bắt đầu click/chạm chuột
+            ticker.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.pageX - ticker.offsetLeft;
+                scrollLeft = ticker.scrollLeft;
+            });
+
+            // Kéo chuột ra khỏi vùng ticker
+            ticker.addEventListener('mouseleave', () => {
+                isDown = false;
+            });
+
+            // Thả chuột ra
+            ticker.addEventListener('mouseup', () => {
+                isDown = false;
+            });
+
+            // Hành động di chuyển chuột
+            ticker.addEventListener('mousemove', (e) => {
+                if (!isDown) return; // Nếu không giữ chuột thì không làm gì
+                e.preventDefault();
+                const x = e.pageX - ticker.offsetLeft;
+                const walk = (x - startX) * 1.5; // Tốc độ lướt (nhân 1.5 cho lướt nhanh hơn)
+                ticker.scrollLeft = scrollLeft - walk;
             });
         });
     </script>
