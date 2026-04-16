@@ -45,6 +45,8 @@
         <img src="assets/images/background.png" alt="Nail Salon Experience" class="hero-bg-img">
 
         <div class="hero-content">
+            <img src="assets/images/footer-logo.png" alt="Logo" class="hero-logo mb-3">
+
             <h1 class="hero-title text-uppercase mb-4">
                 Take your nail salon experience<br>to the next level
             </h1>
@@ -380,10 +382,10 @@
             });
 
             ticker.addEventListener('mousemove', (e) => {
-                if (!isDown) return; 
+                if (!isDown) return;
                 e.preventDefault();
                 const x = e.pageX - ticker.offsetLeft;
-                const walk = (x - startX) * 1.5; 
+                const walk = (x - startX) * 1.5;
                 ticker.scrollLeft = scrollLeft - walk;
             });
         });

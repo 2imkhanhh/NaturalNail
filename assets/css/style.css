@@ -130,10 +130,16 @@ body {
     z-index: 1;
 }
 
+.hero-logo {
+    max-width: 350px; 
+    height: auto;
+    object-fit: contain;
+}
+
 .hero-title {
     font-family: 'Cormorant Garamond', serif;
     color: var(--btn-text);
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
     font-weight: 700;
     letter-spacing: 0.05em;
     line-height: 1.2;
@@ -141,8 +147,11 @@ body {
 }
 
 @media screen and (min-width: 2000px) {
+    .hero-logo {
+        max-width: 500px; 
+    }
     .hero-title {
-        font-size: clamp(4rem, 3vw, 6rem); 
+        font-size: clamp(3.5rem, 3vw, 5rem); 
     }
 }
 
@@ -709,8 +718,12 @@ body {
         border-bottom: 2px solid var(--primary) !important;
     }
 
+    .hero-logo {
+        max-width: 350px; 
+    }
+
     .hero-title {
-        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-size: clamp(2rem, 4vw, 3.5rem); 
     }
 
     .service-ticker .ticker-content {
@@ -886,8 +899,13 @@ body {
         padding-top: 12vh;
     }
 
+    .hero-logo {
+        max-width: 200px; 
+        margin-bottom: 1rem !important; 
+    }
+
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.75rem; 
         line-height: 1.2;
         margin-bottom: 1.5rem !important;
     }
