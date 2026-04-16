@@ -900,12 +900,12 @@ body {
     }
 
     .hero-logo {
-        max-width: 200px; 
+        max-width: 220px; 
         margin-bottom: 1rem !important; 
     }
 
     .hero-title {
-        font-size: 1.75rem; 
+        font-size: 1.5rem; 
         line-height: 1.2;
         margin-bottom: 1.5rem !important;
     }
